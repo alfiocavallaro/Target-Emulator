@@ -7,6 +7,8 @@ var MySmartTV1 = require('./SmartObject/MySmartTV1');
 var MySmartTV2 = require('./SmartObject/MySmartTV2');
 var MyStereo = require('./SmartObject/MyStereo');
 var MyThermometer = require('./SmartObject/MyThermometer');
+var MyLightKitchen = require('./SmartObject/MyLightKitchen');
+var MyLightLiving = require('./SmartObject/MyLightLiving');
 
 // Create our Express application
 var app = express(); 
@@ -27,6 +29,8 @@ router.route('/MyStereo').get(MyStereo.get);
 router.route('/MySmartTV1').get(MySmartTV1.get);
 router.route('/MySmartTV2').get(MySmartTV2.get);
 router.route('/MyThermometer').get(MyThermometer.get);
+router.route('/MyLightKitchen').get(MyLightKitchen.get);
+router.route('/MyLightLiving').get(MyLightLiving.get);
 
 // Register all our routes with /api
 app.use('/', router);
